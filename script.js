@@ -1,22 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const button = document.getElementById("button");
-    const nameInput = document.getElementById("nameInput");
-    const homeworkInput = document.getElementById("homeworkInput");
-    const bodyInput = document.getElementById("bodyInput");
-    const currModuleInput = document.getElementById("currModuleInput");
-    const outputTextarea = document.getElementById("output");
-    const didHomeworkInput = document.getElementById("didHomeworkInput");
+  const button = document.getElementById("button");
+  const nameInput = document.getElementById("nameInput");
+  const homeworkInput = document.getElementById("homeworkInput");
+  const bodyInput = document.getElementById("bodyInput");
+  const currModuleInput = document.getElementById("currModuleInput");
+  const outputTextarea = document.getElementById("output");
+  const didHomeworkInput = document.getElementById("didHomeworkInput");
 
-    button.addEventListener("click", function () {
-        const name = nameInput.value;
-        const homework = homeworkInput.value;
-        const currModule = currModuleInput.value;
-        const body = bodyInput.value;
-        const didHomework = didHomeworkInput.checked;
+  button.addEventListener("click", function () {
+    const name = nameInput.value;
+    const homework = homeworkInput.value;
+    const currModule = currModuleInput.value;
+    const body = bodyInput.value;
+    const didHomework = didHomeworkInput.checked;
 
-        let homeworkCheckText = didHomework ? "did a great job working on the homework" : "didn't work on the homework";
+    let homeworkCheckText = didHomework
+      ? "did a great job working on the homework"
+      : "didn't work on the homework";
 
-        const outputText = `
+    const outputText = `
 📚 **Homework check**: ${name} ${homeworkCheckText}.
 
 ⏰ **Our class today**: During the session today, we were able to ${body}
@@ -27,9 +29,9 @@ Overall, ${name} did a fantastic job with the projects today, and I look forward
 
 -----
 
-✏️️ **Assignment**: For this week’s assignment, ${name} should work on ${homework}
+✏️️ **Assignment**: For this week’s assignment, ${name} should work on ${homework}.
 `;
 
-        outputTextarea.value = outputText;
-    });
+    outputTextarea.value = outputText;
+  });
 });
